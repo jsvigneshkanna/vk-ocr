@@ -1,0 +1,15 @@
+using System;
+using IronOcr;  //importing IronOcr library to extract specified languge letters
+namespace blogging1
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            var Ocr = new AutoOcr(); //creating new object from Ocr class;. can specify which language to read as arguement, by default specified as English
+            var Result = Ocr.Read(@"PATH TO IMAGE");
+            Console.WriteLine(Result.Text);
+            Console.ReadLine();
+        }
+    }
+}
